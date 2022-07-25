@@ -1,0 +1,32 @@
+server:
+  port: ${PORT:8888}
+spring:
+  security:
+    user:
+      name: ${SECURITY_USERNAME:ia-bko}
+      password: ${SECURITY_PWD:ia-bko}
+  profiles:
+    active: vault, git
+  application:
+    name: ia-config-server
+  cloud:
+    config:
+      server:
+        git:
+          order: 2
+          clone-on-start: false
+          search-paths: properties
+          uri: ${URI:https://github.com/tech-infoarte/config.git}
+          username: ${USERNAME:tech-infoarte}
+          password: ${PASSWORD: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}
+          default-label: main
+          ignore-local-ssh-settings: true
+        vault:
+          order: 1       
+          host: ${VAULT_URI}
+          port: 8200
+          kv-version: 2
+          backend: kv
+          profileSeparator: /
+          authentication: TOKEN
+          token: ${VAULT_TOKEN}
