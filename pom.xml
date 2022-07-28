@@ -8,10 +8,10 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.ia</groupId>
-	<artifactId>ia-config-server</artifactId>
+	<groupId>br.com.plusgestao</groupId>
+	<artifactId>config-server</artifactId>
 	<version>0.0.1</version>
-	<name>ia-config-server</name>
+	<name>config-server</name>
 	<description>Spring Cloud Config Server Info Art</description>
 	<properties>
 		<java.version>11</java.version>

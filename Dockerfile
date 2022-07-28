@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG JAR_FILE=target/ia-config-server-0.0.1.jar
+ARG JAR_FILE=target/config-server-0.0.1.jar
 
 WORKDIR /opt/app
 
